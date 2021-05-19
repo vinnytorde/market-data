@@ -1,8 +1,9 @@
 server:
   servlet:
-    context-path: /market-data
-
+    context-path: /stonks/market-data
 
 alpaca:
+  key: ${alpaca.key}
+  secret: ${alpaca.secret}
   endpoint:
     data: https://data.alpaca.markets
