@@ -1,0 +1,3 @@
+alpaca:
+  endpoint:
+    data: https://data.alpaca.markets
