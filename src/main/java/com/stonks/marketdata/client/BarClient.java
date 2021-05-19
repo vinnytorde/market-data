@@ -13,11 +13,11 @@ import org.springframework.web.reactive.function.client.WebClient;
 @RequiredArgsConstructor
 public class BarClient {
 
-  private final WebClient barsClient;
+  private final WebClient alpacaDataClient;
 
   public List<Bar> getBars(final String symbol, Instant startDate) {
     val bars =
-        barsClient
+        alpacaDataClient
             .get()
             .uri(
                 uriBuilder ->

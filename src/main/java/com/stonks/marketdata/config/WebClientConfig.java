@@ -18,7 +18,7 @@ public class WebClientConfig {
   private String alpacaSecretKey;
 
   @Bean
-  public WebClient barsClient() {
+  public WebClient alpacaDataClient() {
     return WebClient.builder()
         .defaultHeader("APCA-API-KEY-ID", alpacaKeyId)
         .defaultHeader("APCA-API-SECRET-KEY", alpacaSecretKey)
