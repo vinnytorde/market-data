@@ -1,3 +1,8 @@
+server:
+  servlet:
+    context-path: /market-data
+
+
 alpaca:
   endpoint:
     data: https://data.alpaca.markets
