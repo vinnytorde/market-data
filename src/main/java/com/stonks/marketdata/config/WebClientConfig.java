@@ -11,6 +11,9 @@ public class WebClientConfig {
   @Value("${alpaca.endpoint.data}")
   private String alpacaDataBaseUrl;
 
+  @Value("${alpaca.endpoint.api}")
+  private String alpacaApiBaseUrl;
+
   @Value("${alpaca.key}")
   private String alpacaKeyId;
 
@@ -23,6 +26,15 @@ public class WebClientConfig {
         .defaultHeader("APCA-API-KEY-ID", alpacaKeyId)
         .defaultHeader("APCA-API-SECRET-KEY", alpacaSecretKey)
         .baseUrl(alpacaDataBaseUrl)
+        .build();
+  }
+
+  @Bean
+  public WebClient alpacaApiClient() {
+    return WebClient.builder()
+        .defaultHeader("APCA-API-KEY-ID", alpacaKeyId)
+        .defaultHeader("APCA-API-SECRET-KEY", alpacaSecretKey)
+        .baseUrl(alpacaApiBaseUrl)
         .build();
   }
 }

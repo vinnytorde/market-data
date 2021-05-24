@@ -7,3 +7,4 @@ alpaca:
   secret: ${alpaca.secret}
   endpoint:
     data: https://data.alpaca.markets
+    api: https://api.alpaca.markets
